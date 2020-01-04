@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -14,5 +15,53 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/medium"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="10K"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/large"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/small" />
+
+    <Button
+        android:id="@+id/large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1000K"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/medium" />
+
+    <Button
+        android:id="@+id/enormous"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1M"
+        app:layout_constraintBottom_toTopOf="@+id/small"
+        app:layout_constraintEnd_toEndOf="@+id/small"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/monstrosity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1B"
+        app:layout_constraintBottom_toTopOf="@+id/medium"
+        app:layout_constraintEnd_toEndOf="@+id/medium"
+        app:layout_constraintStart_toEndOf="@+id/enormous" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
