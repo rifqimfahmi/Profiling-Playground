@@ -18,28 +18,32 @@ class MainActivity : AppCompatActivity() {
 
     private fun executeSmallLoop() {
         for (i in 0..100) {
-            doNothing()
+//            doNothing()
+            allocateObject(i)
         }
         setLoopResult("Small Done")
     }
 
     private fun executeMediumLoop() {
         for (i in 0..10_000) {
-            doNothing()
+//            doNothing()
+            allocateObject(i)
         }
         setLoopResult("Medium Done")
     }
 
     private fun executeLargeLoop() {
         for (i in 0..1_000_000) {
-            doNothing()
+//            doNothing()
+            allocateObject(i)
         }
         setLoopResult("Large Done")
     }
 
     private fun executeEnormousLoop() {
         for (i in 0..1_000_000_000) {
-            doNothing()
+//            doNothing()
+            allocateObject(i)
         }
         setLoopResult("Enormous Done")
     }
@@ -57,5 +61,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun doNothing() {
 
+    }
+
+    private fun allocateObject(i: Int) {
+        val theInt = DummyAlloc(i)
     }
 }
